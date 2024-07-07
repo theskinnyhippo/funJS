@@ -41,3 +41,9 @@ const prt = (item) => {
 }
 
 arrr.forEach(prt)
+
+//forEach doesnt return values but filter does!!
+
+const a = arrr.filter( (cho)=>cho >= "m")
+
+console.log(a)
