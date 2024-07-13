@@ -16,6 +16,14 @@ f.addEventListener('submit',function(e){
         console.log(w)
     }else{
         const bmi = (w*10000/(h*h)).toFixed(3);
-        res.innerHTML = `<span>${bmi}</span>`
+        let m;
+        if(bmi < 18.6){
+            m = "underweight"
+        }else if(bmi < 24.9){
+            m = "perfect"
+        }else{
+            m = "overweight"
+        }
+        res.innerHTML = `<span>${bmi} and you're ${m}</span>`
     }
 })
