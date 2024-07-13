@@ -11,14 +11,14 @@
 
 
         .button {
-            display: inline-block;
+            height: 1000px;
+            weight: 200px;
+            border-radius: 10px;
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            border-radius: 5px;
             cursor: pointer;
-            user-select: none;
             transition: background-color 0.3s;
         }
 
@@ -31,17 +31,21 @@
         } */
 
         #grey{
-            background-color: black;
+            background-color: rgb(14, 0, 78);
+            color: #fff;
         }
-
+        
         #pearl{
             background-color: antiquewhite;
+            color: rgb(58, 3, 3);
         }
         #amber{
             background-color: rgb(255, 125, 197);
+            color: rgb(14, 0, 78);
         }
         #honey{
             background-color: rgb(147, 83, 0);
+            color: rgb(123, 255, 0);
         }
     </style>
 </head>
@@ -51,17 +55,19 @@
     </nav>
 <div >
     <h1>
+        <b>
         Colur scheme Switcher
+         </b>
     </h1>
     
     <h3>select a color</h3>
-    <span class="button" id="grey"></span>
-    <span class="button" id="pearl"></span>
-    <span class="button" id="amber"></span>
-    <span class="button" id="honey"></span>
+    <span class="button" id="grey">blue</span>
+    <span class="button" id="pearl">pearl</span>
+    <span class="button" id="amber">amber</span>
+    <span class="button" id="honey">honey</span>
     
 
 </div>
-        <script>"magic.js"</script>
+        <script src="magic.js"></script>
 </body>
 </html>
