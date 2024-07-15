@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+    <style>
+        body{
+            background: linear-gradient(30deg, #000000, #2b2b2b);
+            padding: 30px;
+        }
+        .take{
+            
+            border-radius: 10px;;
+        }
+        h2{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Images</h2>
+    <div id="images">
+        <ul>
+            <li class="take"><img width="200px" id="luffy" src="https://wallpapers.com/images/high/anime-pictures-bj226rrdwe326upu.webp"></li>
+            <li class="take"><img width="200px" id="boa" src="https://wallpapers.com/images/high/one-piece-aesthetic-anime-girl-iphone-k0dbtqmfwo2hbt8v.webp"></li>
+            <li class="take"><img width="200px" id="yamato" src="https://wallpapers.com/images/high/young-yamato-one-piece-80vwou8uxyp7owxg.webp"></li>
+            <li class="take"><img width="200px" id="all" src="https://wallpapers.com/images/high/aesthetic-one-piece-fanart-bfqyd66z36wxqmfy.webp"></li>
+            
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById('luffy').onclick = function(){
+        alert("orewa monkey d luffy")
+    }
+    document.getElementById('boa').addEventListener('click', function(){
+        alert('sexy serpent!')
+    }, false)
+//3rd parameter by default false hoti hai
+//meaning :-- 
+
+//other ways -> attachEvent(), jQuery - on()
+
+// type, timestamp, preventDefault, defaultPrevented
+//target, toElement, srcElement, currentTarget
+//clientX, clientY, screenX, screenY
+//altkey, ctrlkey, shiftkey, keycode
+
+document.getElementById('images').addEventListener('click', function(e){
+    console.log('clicked on images!');
+}, false)
+
+document.getElementById('yamato').addEventListener('click', function(e){
+    e.preventDefault();
+    //e.stopPropagation()
+    console.log('clicked on yamato!');
+}, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode)
+        if(e.target.tagName === 'IMG'){
+            let rmv = e.target.parentNode;
+            //rmv.remove();
+            rmv.parentNode.removeChild(rmv);
+        }
+    }, false )
+</script> 
+</html>
