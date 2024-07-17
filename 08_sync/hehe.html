@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius: 20px;
+            background: linear-gradient(45deg, #212121, #fff);
+        }
+        .magic{
+            background: linear-gradient(90deg, #aaaaaa, #fff2b8);
+        }
+    </style>
+</head>
+<body class="magic">
+
+        <h1>Maggie khao</h1>
+        <h3></h3>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        
+</body>
+<script>
+    let c = 1;
+    let m;
+
+    function changetext(){
+        document.querySelector('h3').innerHTML = "Khud jan jao!";
+    }
+    document.querySelector('#start').addEventListener('click', function(){
+        m = setInterval(function(){
+            console.log(`mandir ${c++}`);
+        },500);
+        console.log("started!");
+    })
+    
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(m);
+        console.log("stopped!");
+    })
+
+
+</script>
+</html>

@@ -1,1 +1,16 @@
 hello, this is Mandir. And my journey in JS starts here!!
+
+
+and JS is a Synchronous and Single Threaded language
+call stack 
+    each operation waits for the last one to complete before execution
+memory heap
+    where the entire code memory is allocated
+
+
+Blocking code
+    blocks the flow of the program and then read the file Synchronous!
+
+Non Blocking code
+    doesnt block the execution for reading the file Asynchronous!
+
