@@ -1,0 +1,59 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius: 20px;
+            background: linear-gradient(45deg, #212121, #fff);
+        }
+        .magic{
+            background: linear-gradient(90deg, #aaaaaa, #fff2b8);
+        }
+        h1{
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="magic">
+
+        <h1>Maggie khao, Khud jan jao!</h1>
+        <h3></h3>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        
+</body>
+<script>
+    const randomColor = function(){
+        const hex = '0123456789ABCDEF'
+        let color = '#'
+        for (let index = 0; index < 6; index++) {
+          color += hex[Math.floor(Math.random()*16)]
+        }
+        return color
+    }
+    let c = 1;
+    let f = null;
+    const m = function(){
+    
+    const col1 = randomColor();
+    const col2 = randomColor();
+
+        document.body.style.background = `linear-gradient(45deg, ${col1}, ${col2})`;
+        console.log(`col${c++}`);
+    }
+
+    document.querySelector('#start').addEventListener('click', function(){
+        if(f==null){f = setInterval(m, 1000)}
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(f);
+        console.log("stopped!");
+        f = null;
+    })
+</script>
+</html>
